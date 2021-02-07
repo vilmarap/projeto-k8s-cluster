@@ -1,0 +1,3 @@
+---
+# tasks file for create_cluster
+- include: init-cluster.yml
