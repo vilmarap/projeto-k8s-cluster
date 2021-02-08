@@ -7,8 +7,8 @@
     raw: 'apt-get update'
   - name: 'Instalando o Python'
     raw: 'apt-get install -y python'
-  roles:
-  - { role: install-k8s, tags: ["install_k8s_role"]  } 
+  roles: 
+  - { role: install-k8s, tags: ["install_k8s_role"] }
 
 - hosts: k8s-master
   become: yes
@@ -21,3 +21,4 @@
   user: ubuntu
   roles:
   - { role: join-workers, tags: ["join_workers_role"] }
+
